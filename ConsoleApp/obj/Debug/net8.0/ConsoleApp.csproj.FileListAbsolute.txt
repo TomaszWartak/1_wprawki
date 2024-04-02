@@ -1,0 +1,14 @@
+/Users/tomaszwartak/1_wprawki/ConsoleApp/bin/Debug/net8.0/ConsoleApp
+/Users/tomaszwartak/1_wprawki/ConsoleApp/bin/Debug/net8.0/ConsoleApp.deps.json
+/Users/tomaszwartak/1_wprawki/ConsoleApp/bin/Debug/net8.0/ConsoleApp.runtimeconfig.json
+/Users/tomaszwartak/1_wprawki/ConsoleApp/bin/Debug/net8.0/ConsoleApp.dll
+/Users/tomaszwartak/1_wprawki/ConsoleApp/bin/Debug/net8.0/ConsoleApp.pdb
+/Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/ConsoleApp.AssemblyInfoInputs.cache
+/Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/ConsoleApp.AssemblyInfo.cs
+/Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/ConsoleApp.csproj.CoreCompileInputs.cache
+/Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/ConsoleApp.dll
+/Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/refint/ConsoleApp.dll
+/Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/ConsoleApp.pdb
+/Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/ConsoleApp.genruntimeconfig.cache
+/Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/ref/ConsoleApp.dll
