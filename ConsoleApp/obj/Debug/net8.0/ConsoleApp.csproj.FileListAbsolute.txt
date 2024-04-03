@@ -12,3 +12,7 @@
 /Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/ConsoleApp.pdb
 /Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/ConsoleApp.genruntimeconfig.cache
 /Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/ref/ConsoleApp.dll
+/Users/tomaszwartak/1_wprawki/ConsoleApp/bin/Debug/net8.0/Newtonsoft.Json.dll
+/Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/ConsoleApp.csproj.AssemblyReference.cache
+/Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/ConsoleApp.sourcelink.json
+/Users/tomaszwartak/1_wprawki/ConsoleApp/obj/Debug/net8.0/ConsoleApp.csproj.Up2Date
