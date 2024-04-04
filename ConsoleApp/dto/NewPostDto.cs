@@ -1,4 +1,5 @@
-struct NewPostDto {
+namespace ConsoleApp;
+public struct NewPostDto {
     public NewPostDto( int userId, string title, string body ) {
         UserId = userId;
         Title = title;

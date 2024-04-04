@@ -1,4 +1,3 @@
-//namespace CalculatorTest;
 using ConsoleApp;
 public class UnitTest1
 {

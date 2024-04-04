@@ -102,3 +102,4 @@
 /Users/tomaszwartak/1_wprawki/CalcTest/obj/Debug/net8.0/CalcTest.pdb
 /Users/tomaszwartak/1_wprawki/CalcTest/obj/Debug/net8.0/CalcTest.genruntimeconfig.cache
 /Users/tomaszwartak/1_wprawki/CalcTest/obj/Debug/net8.0/ref/CalcTest.dll
+/Users/tomaszwartak/1_wprawki/CalcTest/obj/Debug/net8.0/CalcTest.sourcelink.json

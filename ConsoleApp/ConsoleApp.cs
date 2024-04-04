@@ -1,4 +1,4 @@
-﻿namespace Basic;
+﻿namespace ConsoleApp;
 
 using Newtonsoft.Json;
 using System.IO;
