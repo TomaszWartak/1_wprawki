@@ -1,9 +1,19 @@
-using Newtonsoft.Json;
-using System.IO;
 using System.Net;
 using System.Text;
 using ConsoleApp;
+using Newtonsoft.Json;
+using Xunit.Abstractions;
+
+namespace CalcTest;
+
 public class WebApiTest {
+    private readonly ITestOutputHelper _testOutputHelper;
+
+    public WebApiTest(ITestOutputHelper testOutputHelper)
+    {
+        _testOutputHelper = testOutputHelper;
+    }
+
     const string API_URL = "https://jsonplaceholder.typicode.com/posts";
     [Fact]
     public async Task TestPost() {
@@ -17,8 +27,8 @@ public class WebApiTest {
             if (response.IsSuccessStatusCode) {
                 string responseContent = await response.Content.ReadAsStringAsync();
                 // Process the response data here
-                Post post = JsonConvert.DeserializeObject<Post>(responseContent);
-        } else {
+                Post? post = JsonConvert.DeserializeObject<Post>(responseContent);
+            } else {
                 switch (response.StatusCode) {
                     case HttpStatusCode.NotFound:
                     // Handle 404 Not Found
@@ -31,22 +41,22 @@ public class WebApiTest {
                 }
         	}
         } catch( HttpRequestException exception ) {
-            Console.WriteLine( exception.Message );
+            _testOutputHelper.WriteLine( exception.Message );
         } catch (TaskCanceledException ex) {
             // Obsłuż anulowanie zadania (timeout)
-            Console.WriteLine($"Anulowanie zadania: {ex.Message}");
+            _testOutputHelper.WriteLine($"Anulowanie zadania: {ex.Message}");
         } catch (InvalidOperationException ex) {
             // Obsłuż inne błędy związane z niepoprawnym stanem aplikacji
-            Console.WriteLine($"Błąd operacji: {ex.Message}");
+            _testOutputHelper.WriteLine($"Błąd operacji: {ex.Message}");
         } catch (IOException ex) {
             // Obsłuż błędy wejścia-wyjścia
-            Console.WriteLine($"Błąd wejścia-wyjścia: {ex.Message}");
+            _testOutputHelper.WriteLine($"Błąd wejścia-wyjścia: {ex.Message}");
         } catch (UriFormatException ex) {
             // Obsłuż błędy związane z niepoprawnym formatem adresu URL
-            Console.WriteLine($"Błąd formatu URL: {ex.Message}");
+            _testOutputHelper.WriteLine($"Błąd formatu URL: {ex.Message}");
         } catch (Exception ex) {
             // Obsłuż pozostałe wyjątki, które nie zostały wyraźnie obsłużone powyżej
-            Console.WriteLine($"Nieoczekiwany wyjątek: {ex.Message}");
+            _testOutputHelper.WriteLine($"Nieoczekiwany wyjątek: {ex.Message}");
         } finally {
             httpClient.Dispose();
         }

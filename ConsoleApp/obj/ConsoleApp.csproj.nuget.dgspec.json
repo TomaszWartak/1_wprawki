@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tomaszwartak/1_wprawki/ConsoleApp/ConsoleApp.csproj": {}
+    "/Users/tomaszwartak/RiderProjects/1_wprawki/ConsoleApp/ConsoleApp.csproj": {}
   },
   "projects": {
-    "/Users/tomaszwartak/1_wprawki/ConsoleApp/ConsoleApp.csproj": {
+    "/Users/tomaszwartak/RiderProjects/1_wprawki/ConsoleApp/ConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tomaszwartak/1_wprawki/ConsoleApp/ConsoleApp.csproj",
+        "projectUniqueName": "/Users/tomaszwartak/RiderProjects/1_wprawki/ConsoleApp/ConsoleApp.csproj",
         "projectName": "ConsoleApp",
-        "projectPath": "/Users/tomaszwartak/1_wprawki/ConsoleApp/ConsoleApp.csproj",
+        "projectPath": "/Users/tomaszwartak/RiderProjects/1_wprawki/ConsoleApp/ConsoleApp.csproj",
         "packagesPath": "/Users/tomaszwartak/.nuget/packages/",
-        "outputPath": "/Users/tomaszwartak/1_wprawki/ConsoleApp/obj/",
+        "outputPath": "/Users/tomaszwartak/RiderProjects/1_wprawki/ConsoleApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tomaszwartak/.nuget/NuGet/NuGet.Config"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {

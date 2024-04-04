@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ptOFeGr7knOqrQqXuPpm71v4817NfTY1khLKGxZJefgn8ZpvnrbB7x0GTYO+vWqAedOdXBvR/VxNDvlupm3abA==",
+  "dgSpecHash": "aP+CiQoakraQ3q+V575Ib7mUME/l67kx4fNnBSQdefzQTO8ZyqE8Bxj/0YsSX2Iqy/+xTEIpF2/UT2zBS/DTTw==",
   "success": true,
-  "projectFilePath": "/Users/tomaszwartak/1_wprawki/ConsoleApp/ConsoleApp.csproj",
+  "projectFilePath": "/Users/tomaszwartak/RiderProjects/1_wprawki/ConsoleApp/ConsoleApp.csproj",
   "expectedPackageFiles": [
     "/Users/tomaszwartak/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
   ],

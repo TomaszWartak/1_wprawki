@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tZSbT45elagZ0pDOmxdr/+i8GSS6Mbq/Du4RLaSDnAE+4TBhoOCVVg/sqY7lXvoeVmVbei7sYG8RvAQ0azCTlQ==",
+  "dgSpecHash": "cuBCMy8lC+OMwzlanjvfY8zI4RM7eFplWbE0e91+EFsAgj0HQMKpxJjNDaZ93YlEemHnXddWBpPnzrI9tEwDgg==",
   "success": true,
-  "projectFilePath": "/Users/tomaszwartak/1_wprawki/CalcTest/CalcTest.csproj",
+  "projectFilePath": "/Users/tomaszwartak/RiderProjects/1_wprawki/CalcTest/CalcTest.csproj",
   "expectedPackageFiles": [
     "/Users/tomaszwartak/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
     "/Users/tomaszwartak/.nuget/packages/microsoft.codecoverage/17.8.0/microsoft.codecoverage.17.8.0.nupkg.sha512",

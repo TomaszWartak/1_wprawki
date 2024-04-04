@@ -1,4 +1,7 @@
 using ConsoleApp;
+
+namespace CalcTest;
+
 public class UnitTest1
 {
     [Fact]
