@@ -10,7 +10,7 @@ public class WebApiTest {
     //private readonly ITestOutputHelper output;
     private readonly ConsoleOutputHelper _output;
     
-    const string API_URL = "https://jsonplaceholder.typicode.com/posts1";
+    private const string API_URL = "https://jsonplaceholder.typicode.com/posts";
 
     public WebApiTest(/*ConsoleOutputHelper output*/)
     {
@@ -49,6 +49,7 @@ public class WebApiTest {
                         _output.WriteLine("401 Unauthorized");
                         break;
                     default:
+                        _output.WriteLine( response.StatusCode.ToString() );
                         break;
                 }
         	}
@@ -110,5 +111,93 @@ public class WebApiTest {
         
         Assert.Equal( new Post( 2,101, "title-title", "body-body"), dataFromResponse );
     }
+
+    [Fact]
+    public async Task PostProperDataShouldReturnNewJsonObjectV2() {
+        
+        using HttpClient httpClient = new();
+        NewPostDto newPostDto = new( 2,"title-title", "body-body" );
+        string newPostJson = JsonConvert.SerializeObject( newPostDto );
+        StringContent jsonContent = new( newPostJson, Encoding.UTF8, "application/json");
+        Post? dataFromResponse = null;
+        
+        try
+        {
+            HttpResponseMessage response = await httpClient.PostAsync(API_URL, jsonContent);
+            if (response.IsSuccessStatusCode)
+            {
+                string responseContent = await response.Content.ReadAsStringAsync();
+                dataFromResponse = JsonConvert.DeserializeObject<Post>(responseContent);
+            }
+            else
+            {
+                switch (response.StatusCode)
+                {
+                    case HttpStatusCode.NotFound:
+                        _output.WriteLine("404 Not Found");
+                        break;
+                    case HttpStatusCode.Unauthorized:
+                        _output.WriteLine("401 Unauthorized");
+                        break;
+                    default:
+                        break;
+                }
+            }
+        } catch( Exception ex) {
+            // _testOutputHelper.WriteLine($"Nieoczekiwany wyjątek: {ex.Message}");
+            _output.WriteLine($"Nieoczekiwany wyjątek: {ex.Message}");
+        }
+        
+        Assert.Equal( new Post( 2,101, "title-title", "body-body"), dataFromResponse );
+    }
     
+    [Fact]
+    public async Task PutProperDataShouldReturnModifiedJsonObject()
+    {
+        HttpClient httpClient = new();
+        PostDto postDto = new(50);
+        postDto.UserId = 5;
+        postDto.Title = "title-dupa-title";
+        string modifyPostJson = JsonConvert.SerializeObject( postDto );
+        StringContent jsonContent = new( modifyPostJson, Encoding.UTF8, "application/json");
+        Post? dataFromResponse = null;
+
+        try {
+            string apiUrlPutPost = Path.Combine( API_URL, postDto.Id.ToString() );
+            HttpResponseMessage response = await httpClient.PutAsync(apiUrlPutPost, jsonContent);
+            if (response.IsSuccessStatusCode) {
+                string responseContent = await response.Content.ReadAsStringAsync();
+                dataFromResponse = JsonConvert.DeserializeObject<Post>(responseContent);
+            } else {
+                switch (response.StatusCode) {
+                    case HttpStatusCode.NotFound:
+                        _output.WriteLine("404 Not Found");
+                        break;
+                    case HttpStatusCode.Unauthorized:
+                        _output.WriteLine("401 Unauthorized");
+                        break;
+                    default:
+                        break;
+                }
+            }
+        } catch( Exception ex) {
+            // _testOutputHelper.WriteLine($"Nieoczekiwany wyjątek: {ex.Message}");
+            _output.WriteLine($"Nieoczekiwany wyjątek: {ex.Message}");
+        } finally {
+            httpClient.Dispose();
+        }
+        
+        Assert.Equal( 
+            new Post( 
+                5,
+                50, 
+                "title-dupa-title", 
+                @"error suscipit maxime adipisci consequuntur recusandae 
+                    nvoluptas eligendi et est et voluptates
+                    nquia distinctio ab amet quaerat molestiae et vitae
+                    nadipisci impedit sequi nesciunt quis consectetur"), 
+            dataFromResponse 
+        );
+
+    }
 }
